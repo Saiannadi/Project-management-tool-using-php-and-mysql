@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script type="text/javascript" src="jquery.js"></script>
+        <script>
+            /*
+            This script is identical to the above JavaScript function.
+            */
+            var ct = 1;
+            function new_link()
+            {
+                ct++;
+                var div1 = document.createElement('div');
+                div1.id = ct;
+                // link to delete extended form elements
+                var delLink = '<div style="text-align:right;margin-right:100px"><a href="javascript:delIt('+ ct +')">Del</a></div>';
+                div1.innerHTML = document.getElementById('newlinktpl').innerHTML + delLink;
+                document.getElementById('newlink').appendChild(div1);
+            }
+            // function to delete the newly added set of elements
+            function delIt(eleId)
+            {
+                d = document;
+                var ele = d.getElementById(eleId);
+                var parentEle = d.getElementById('newlink');
+                parentEle.removeChild(ele);
+            }
+            </script>
+            <style>
+                 body {
+                    background-image: url("back7.png");
+          background-size:1517px 750px;
+ background-color: #cccccc;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:royalblue;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#1687a7;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25;
+}
+
+.topnav a:hover {
+  background-color:#62959c;
+  color: white;
+}
+
+.topnav a.active {
+  color: white;
+  font-size:40;
+}
+.topnav a.f3 {
+  color: white;
+  font-size:25;
+  float:right;
+}
+.f5{
+  margin:5px;
+  text-align:center;
+  font-family:simpson;
+  font-size:25;
+}
+.box{
+    width:230px;
+    display:inline-block;
+}
+.box1{
+    width:350px;
+    display:inline-block;
+}
+.b1{
+    margin-left:5px;
+    width:300px;
+}
+.b2{
+    margin-left:5px;
+    width:450px;
+}
+
+
+            </style>
+    </head>
+    <body>
+        <style>
+            #newlink {width:600px}
+         </style>
+          <div class="topnav">
+            <a class="active" href="index.php">PMT</a>
+            <a href="project.php">PROJECT</a>
+            <a href="clients.php">CLIENTS</a>
+            <a href="invoice.php">invoice</a>
+            <a class="f3"  href="logout.php">LOG OUT</a>
+          </div>
+<div class="container mt-5 shadow-lg p-3 mb-5 bg-white rounded rounded-right"> 
+                    <h3 class="card-header bg-success text-white text-center">New Client Registration form</h3>
+                        <form class="mb-5 m-5 form-horizontal"action="addclient.php" method="post">
+                            <div class="row">
+                                <div class="col-sm-6">
+                            <div class="form-group">                                 
+                                <label for="exampleInputEmail1">Client Name:  </label>
+                                <input type="text" class="form-control" name="clname" placeholder="Client Name..">
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                <div class="form-group">
+                                <label for="exampleInputEmail1">company Name:  </label>
+                                <input type="text" class="form-control" name="coname" placeholder="Company Name..">
+                            </div>
+                            </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Email id:  </label>
+                                <input type="text" class="form-control" name="emailid" placeholder="Email id..">
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Mobile Number:  </label>
+                                <input type="text" class="form-control" name="number" placeholder="Mobile number..">
+                                </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Company Address:  </label>
+                                <input type="text" class="form-control" name="cadd" placeholder="Company address"..">
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Gst Number: </label>
+                                <input type="text" class="form-control" name="gst" placeholder="Gst Number..">
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Project Name: </label>
+                                <input type="text" class="form-control" name="pname" placeholder="Project Name..">
+                                </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Project Status: </label>
+                                <select class="box1 form-control" name="pst" id="carname">
+                                    <option val="">Please choose</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="progress">Progress</option>
+                                    <option value="completed">Completed</option>
+                                </select>                                 </div>
+                                </div>
+                                <div class="col-sm-5">
+                            <div id="newlink">                           
+                                <p id="addnew">
+                                    <a class="form-group text-success" href="javascript:new_link()">Add contacts </a>
+                                </p>
+                                    </div>
+                                    </div>
+                               
+                                
+                           
+            
+                           
+    <div class="col-sm-10">                    
+     <div id="newlinktpl" style="display:none">
+           
+                <div class="form-group">
+                    <table border="0">
+                        <tr>
+                <td><input type="text" class="form-control b1" name="nam[]" placeholder="CONTACT NAME.."><td>
+                <td><input type="text" class="form-control b1" name="num[]" placeholder="CONTACT NUMBER.."></td>
+                <td><input type="text" class="form-control b1" name="rel[]" placeholder="CONTACT RELATIONSHIP.."></td>
+        </tr>
+    </table>
+    </div>
+    </div>
+ </div>
+ 
+                <div class="col-sm-12">
+                <center><button type="submit" class="btn btn-success text-center">Submit</button></center>
+                </div>
+                            </form> 
+               </div>
+            </div>
+           
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    </body>
+</html>

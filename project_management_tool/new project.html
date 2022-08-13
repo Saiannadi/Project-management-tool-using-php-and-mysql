@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script type="text/javascript" src="jquery.js"></script>
+        <script>
+            /*
+            This script is identical to the above JavaScript function.
+            */
+            var ct = 1;
+            function new_link()
+            {
+                ct++;
+                var div1 = document.createElement('div');
+                div1.id = ct;
+                // link to delete extended form elements
+                var delLink = '<div style="text-align:right;margin-right:100px"><a href="javascript:delIt('+ ct +')">Del</a></div>';
+                div1.innerHTML = document.getElementById('newlinktpl').innerHTML + delLink;
+                document.getElementById('newlink').appendChild(div1);
+            }
+            // function to delete the newly added set of elements
+            function delIt(eleId)
+            {
+                d = document;
+                var ele = d.getElementById(eleId);
+                var parentEle = d.getElementById('newlink');
+                parentEle.removeChild(ele);
+            }
+            </script>
+                    <script>
+                        /*
+                        This script is identical to the above JavaScript function.
+                        */
+                        var ct = 1;
+                        function new_link1()
+                        {
+                            ct++;
+                            var div1 = document.createElement('div');
+                            div1.id = ct;
+                            // link to delete extended form elements
+                            var delLink = '<div style="text-align:right;margin-right:100px"><a href="javascript:delIt1('+ ct +')">Del</a></div>';
+                            div1.innerHTML = document.getElementById('newlinktpl1').innerHTML + delLink;
+                            document.getElementById('newlink1').appendChild(div1);
+                        }
+                        // function to delete the newly added set of elements
+                        function delIt1(eleId)
+                        {
+                            d = document;
+                            var ele = d.getElementById(eleId);
+                            var parentEle = d.getElementById('newlink1');
+                            parentEle.removeChild(ele);
+                        }
+                        </script>
+            <style>
+                 body {
+                    background-image: url("back7.png");
+          background-size:1517px 750px;
+ background-color: #cccccc;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:royalblue;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#1687a7;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25;
+}
+
+.topnav a:hover {
+  background-color:#62959c;
+  color: white;
+}
+
+.topnav a.active {
+  color: white;
+  font-size:40;
+}
+.topnav a.f3 {
+  color: white;
+  font-size:25;
+  float:right;
+}
+.f5{
+  margin:5px;
+  text-align:center;
+  font-family:simpson;
+  font-size:25;
+}
+.box{
+    width:230px;
+    display:inline-block;
+}
+.box1{
+    width:360px;
+    display:inline-block;
+}
+.b1{
+    margin-left:5px;
+    width:500px;
+}
+.b3{
+    margin-left:5px;
+    width:250px;
+}
+.b2{
+    margin-left:5px;
+    width:450px;
+}
+
+
+            </style>
+    </head>
+    <body>
+        <style>
+            #newlink {width:600px}
+         </style>
+ <div class="topnav">
+    <a class="active" href="index.php">PMT</a>
+    <a href="project.php">PROJECT</a>
+    <a href="clients.php">CLIENTS</a>
+    <a href="invoice.php">invoice</a>
+    <a class="f3"  href="logout.php">LOG OUT</a>
+  </div>
+<div class="container mt-5 shadow-lg p-3 mb-5 bg-white rounded rounded-right"> 
+                    <h3 class="card-header bg-success text-white text-center">New project Registration form</h3>
+                        <form class="mb-5 m-5 form-horizontal"action="addproject.php" method="post">
+                            <div class="row">
+                                <div class="col-sm-6">
+                            <div class="form-group">                                 
+                                <label for="exampleInputEmail1">project Name:  </label>
+                                <input type="text" class="form-control" name="pname" placeholder="Project Name..">
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                <div class="form-group">
+                                <label for="exampleInputEmail1">project Requirements:  </label>
+                                <input type="text" class="form-control" name="prequir" placeholder="Project requirements..">
+                            </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="form-group">
+                                <label for="exampleInputEmail1">project price:  </label>
+                                <select class="box1 form-control" name="cname" id="carname">
+                                    <option val="">Please choose</option>
+                                    <option value="INR">INR</option>
+                                    <option value="dollar">DOLLAR</option>
+                                    <option value="euro">EURO</option>
+                                </select>
+                                <input type="text" class=" box1 form-control" name="pprice" placeholder="Project Price..">
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Project Gst:  </label>
+                                <input type="text" class="form-control" name="pgst" placeholder="Project Gst..">
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Project Duration:  </label>
+                                <input type="text" class="form-control" name="pdura" placeholder="project Duration..">
+                                </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Reference client:  </label>
+                                <input type="text" class="form-control" name="rclient" placeholder="Reference Client"..">
+                                </div>
+                                </div>
+                                <div class="col-sm-5">
+                            <div id="newlink">                           
+                                <p id="addnew">
+                                    <a class="form-group text-success" href="javascript:new_link()">Add payment </a>
+                                </p>
+                                    </div>
+                                    </div>
+                               
+                                </div>
+                                <table border="0" >
+                                    <tr>
+                                        <td>
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Project Client: </label>
+                                <input type="text" class="form-control b2" name="pclient" placeholder="Project Client..">
+                                </div>
+                                </div>
+                            </td>
+                                    <td>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                <label for="exampleInputEmail1">Project Status: </label>
+                                <select class="box1 form-control b2" name="pst" id="carname">
+                                    <option val="">Please choose</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="progress">Progress</option>
+                                    <option value="completed">Completed</option>
+                                </select>                                </div>
+                                </div>
+                                </td>
+                                </tr>
+                                </table>
+                                <div class="col-sm-6">
+                                <div id="newlink1">
+                                    
+                                    <p id="addnew1">
+                                        <a class="form-group text-success" href="javascript:new_link1()">Add project task </a>
+                                    </p>
+                                    </div>
+                                </div>
+                                    
+                           
+            
+                           
+    <div class="col-sm-10">                    
+     <div id="newlinktpl" style="display:none">
+           
+                <div class="form-group">
+                <table border="0">
+                <tr>
+                <td><input type="text" class="form-control b3" name="pay[]" placeholder="payment.."><td>
+                <td><input type="date" class="form-control b3" name="payd[]" placeholder="payment Date.."></td>
+                <td><input type="text" class="form-control b3" name="dupay[]" placeholder="Due payment.."></td>
+                <td><input type="date" class="form-control b3" name="dupayd[]" placeholder="Due payment Date.."></td>
+        </tr>
+    </table>
+    </div>
+    </div>
+ </div>
+ <div class="col-sm-10"> 
+               <div id="newlinktpl1" style="display:none">
+                <div class="form-group ">
+                    <table border="0">
+                    <tr>
+                        <td>
+                    <input type="text" class="form-control b1" name="ptask[]" placeholder="Project Task.."></td>
+                    <td>
+                    <input type="text" class="form-control b1" name="tdur[]" placeholder="Task Duration Hour.."></td>
+                    </tr>
+                    <tr>
+                    <td>
+                 <select class="box form-control b1" name="ppic[]" id="carname">
+                    <option val="">Please choose</option>
+                    <option value="INR">INR</option>
+                    <option value="dollar">DOLLAR</option>
+                    <option value="euro">EURO</option>
+                </select>
+                <input type="text" class="box form-control b1" name="tprice[]" placeholder="Task Price.."></td>
+                <td>
+                    <input type="text" class="form-control b1" name="tdesc[]" placeholder="Task Description.."></td>
+            </tr>
+                </table>
+                    </div>
+                    </div>
+                </div>
+                
+               <center> <button type="submit" class="btn btn-success">Submit</button></center>
+                            </form> 
+               </div>
+            </div>
+           
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    </body>
+</html>
