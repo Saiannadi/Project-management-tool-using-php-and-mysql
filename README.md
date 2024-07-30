@@ -4,7 +4,7 @@
 
 ![image](https://github.com/Saiannadi/Project-management-tool-using-php-and-mysql/assets/111168434/b5d60adc-6fd0-461c-b9e7-003744bfce70)
 
-TThe Project Management System is a comprehensive web application developed using PHP and MySQL, aiming to streamline project management and client interaction. This system is designed to cater to businesses and freelancers who need an efficient platform to organize client data, manage project details, generate invoices for payments, and track payment updates seamlessly.
+The Project Management System is a comprehensive web application developed using PHP and MySQL, aiming to streamline project management and client interaction. This system is designed to cater to businesses and freelancers who need an efficient platform to organize client data, manage project details, generate invoices for payments, and track payment updates seamlessly.
 
 The user-friendly interface of the system allows users to register with their email and create a secure password for account access. Once registered, users can log in to the system, gaining access to a centralized dashboard where they can efficiently manage their projects and clients.
 
